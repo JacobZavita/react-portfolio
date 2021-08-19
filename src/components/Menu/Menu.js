@@ -34,22 +34,22 @@ export default function SimpleMenu() {
         onClose={handleClose}
       >
         <MenuItem onClick={handleClose}>
-          <Link to='/jacob-react-portfolio/' style={styles.links}>
+          <Link to='/' style={styles.links}>
             About Me
           </Link>
         </MenuItem>
         <MenuItem onClick={handleClose}>
-          <Link to='/jacob-react-portfolio/portfolio' style={styles.links}>
+          <Link to='/portfolio' style={styles.links}>
             Portfolio
           </Link>
         </MenuItem>
         <MenuItem onClick={handleClose}>
-          <Link to='/jacob-react-portfolio/contact' style={styles.links}>
+          <Link to='/contact' style={styles.links}>
             Contact
           </Link>
         </MenuItem>
         <MenuItem onClick={handleClose}>
-          <Link to='/jacob-react-portfolio/resume' style={styles.links}>
+          <Link to='/resume' style={styles.links}>
             Resume
           </Link>
         </MenuItem>

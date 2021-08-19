@@ -1,8 +1,7 @@
 import '@fontsource/roboto'
-// import Container from '@material-ui/core/Container'
 import { makeStyles } from '@material-ui/core/styles'
-// import Paper from '@material-ui/core/Paper'
 import { Typography, Grid, Button } from '@material-ui/core'
+import { Link } from 'react-router-dom'
 
 
 const useStyles = makeStyles((theme) => ({
@@ -63,12 +62,16 @@ const About = () => {
             <Typography variant='h4' className={classes.text}>
               Frontend developer with a background in B2B SaaS sales. I'm certified in Full Stack Web Development by UC Irvine. Check out my work.
             </Typography>
-            <Button className={classes.button}>
-              Check out my projects
-            </Button>
-            <Button className={classes.button}>
-              Check out my github
-            </Button>
+              <Link to='/portfolio'>
+                <Button className={classes.button}>
+                  Check out my projects
+                </Button>
+              </Link>
+              <Link to=''>
+                <Button className={classes.button}>
+                  Check out my github
+                </Button>
+              </Link>
           </Grid>
           <Grid item xs={12} md={6}>
             <img src='https://i.postimg.cc/Njfzsfyv/00100lr-PORTRAIT-00100-BURST20200828161547179-COVER.jpg' alt='Jacob Zavita' className={classes.mainImage} />
