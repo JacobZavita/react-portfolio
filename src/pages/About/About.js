@@ -8,7 +8,7 @@ const useStyles = makeStyles((theme) => ({
   root: {
     display: 'flex',
     flexWrap: 'wrap',
-    minHeight: '100vh',
+    minHeight: '89vh',
     alignItems: 'center',
     justifyContent: 'center',
     '& > *': {
@@ -27,6 +27,9 @@ const useStyles = makeStyles((theme) => ({
   },
   text: {
     color: '#FCF7F8',
+  },
+  buttonText: {
+    textDecoration: 'none'
   },
   textArea: {
     margin: '5% auto',
@@ -62,12 +65,12 @@ const About = () => {
             <Typography variant='h4' className={classes.text}>
               Frontend developer with a background in B2B SaaS sales. I'm certified in Full Stack Web Development by UC Irvine. Check out my work.
             </Typography>
-              <Link to='/portfolio'>
+            <Link to='/portfolio' className={classes.buttonText}>
                 <Button className={classes.button}>
                   Check out my projects
                 </Button>
               </Link>
-              <Link to=''>
+              <Link to='' className={classes.buttonText}>
                 <Button className={classes.button}>
                   Check out my github
                 </Button>
