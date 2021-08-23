@@ -22,12 +22,17 @@ const useStyles = makeStyles((theme) => ({
   menuButton: {
     marginRight: theme.spacing(2),
   },
+  mobileMenuButton: {
+    maxWidth: '10vw',
+    display: 'flex'
+  },
   navLinks: {
     marginTop: theme.spacing(3.5),
     display: 'flex'
   },
   title: {
     flexGrow: 1,
+    display: 'flex',
   },
   titleLink: {
     marginLeft: theme.spacing(5),
@@ -35,12 +40,19 @@ const useStyles = makeStyles((theme) => ({
     color: 'inherit',
     fontSize: '30px',
   },
+  mobileTitleLink: {
+    textDecoration: 'none',
+    color: 'inherit',
+    fontSize: '18px',
+    display: 'flex',
+  },
   link: {
     textDecoration: 'none',
     color: 'inherit',
     fontSize: '22px',
     marginLeft: theme.spacing(8),
-    marginTop: theme.spacing(1)
+    marginTop: theme.spacing(1),
+    display: 'flex'
   },
   finalNavLink: {
     textDecoration: 'none',
@@ -64,14 +76,16 @@ const TopBar = () => {
         <CssBaseline />
         {isMobile ? (
           <>
-            <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
+            <IconButton edge="start" className={classes.mobileMenuButton} color="inherit" aria-label="menu">
               <Menu />
             </IconButton>
-            <Typography variant="h6" className={classes.title}>
-              <Link to='/' className={classes.titleLink}>
-                Jacob Zavita - Full Stack Developer
-              </Link>
-            </Typography>
+              <div style={{ margin: 'auto' }}>
+                <Typography variant="h6" className={classes.title}>
+                  <Link to='/' className={classes.mobileTitleLink}>
+                    Jacob Zavita - Full Stack Developer
+                  </Link>
+                </Typography>
+              </div>
           </>
         ) : (
           <div className={classes.navLinks}>
