@@ -10,10 +10,11 @@ import Button from '@material-ui/core/Button';
 
 const useStyles = makeStyles((theme) => ({
   root: {
+    display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
     minHeight: '89vh',
-    backgroundColor: '#042A2B',
+    backgroundColor: '#042A2B'
   },
   list: {
     display: 'flex',
@@ -44,14 +45,14 @@ const Resume = () => {
   return (
     <div className={classes.root}>
         <div className={classes.list} align='center' >
-          <Paper elevation={3} style={{ margin:'15px auto', padding:'20px 5px' }}>
+          <Paper elevation={3} style={{ margin:'15px auto', padding:'20px 5px 50px' }}>
             <Typography variant='h4'>
               Skills
             </Typography>
             <hr></hr>
             <Grid container spacing={2}>
               <Grid item xs={6}>
-                <List component="nav" >
+                <List component="nav" style={{ margin: '0px 0px 0px 90px' }}>
                   <ListItem>
                     <DevIcon icon='react' style={{ fill: 'purple', width:'40px', marginRight:'5px' }} viewBox='0 0 32 32'/>
                     <Typography>React</Typography>
@@ -83,7 +84,7 @@ const Resume = () => {
                 </List>
               </Grid>
               <Grid item xs={6}>
-                <List>
+                <List style={{ margin: '0px 0px 0px 90px' }}>
                   <ListItem>
                     <DevIcon icon='bootstrap' style={{ fill: 'purple', width: '40px', marginRight: '5px' }} viewBox='0 0 32 32' />
                     <Typography>Bootstrap</Typography>
@@ -115,10 +116,12 @@ const Resume = () => {
                 </List>
               </Grid>
             </Grid>
+            <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '10px' }}>
+              <Button className={classes.button} onClick={downloadFile}>
+                Download Resume
+              </Button>
+            </div>
           </Paper>
-        </div>
-        <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '10px' }}>
-          <Button className={classes.button} onClick={downloadFile}>Download Resume</Button>
         </div>
     </div>
   )
