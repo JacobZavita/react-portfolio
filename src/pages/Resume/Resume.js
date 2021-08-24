@@ -1,12 +1,6 @@
 import { makeStyles } from '@material-ui/core/styles'
-import Paper from '@material-ui/core/Paper'
-import Typography from '@material-ui/core/Typography'
-import List from '@material-ui/core/List';
-import ListItem from '@material-ui/core/ListItem';
 import DevIcon from 'devicon-react-svg'
-import { Grid } from '@material-ui/core'
-import Button from '@material-ui/core/Button';
-// import pdf from '../../assets'
+import { Grid, Paper, Typography, List, ListItem, Button } from '@material-ui/core'
 
 const useStyles = makeStyles((theme) => ({
   root: {

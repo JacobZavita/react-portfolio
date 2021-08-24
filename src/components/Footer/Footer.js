@@ -1,12 +1,8 @@
 import{ makeStyles } from '@material-ui/core/styles'
-import Container from '@material-ui/core/Container'
-import Grid from '@material-ui/core/Grid'
-import Box from '@material-ui/core/Box'
-import Link from '@material-ui/core/Link'
+import { Container, Grid, Box, Link, Typography } from '@material-ui/core'
 import TwitterIcon from '@material-ui/icons/Twitter'
 import LinkedInIcon from '@material-ui/icons/LinkedIn'
 import GitHubIcon from '@material-ui/icons/GitHub'
-import { Typography } from '@material-ui/core'
 
 const useStyles = makeStyles((theme) => ({
   box: {
