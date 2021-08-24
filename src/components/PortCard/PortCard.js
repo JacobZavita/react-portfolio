@@ -1,34 +1,40 @@
-import { makeStyles } from '@material-ui/core/styles'
+import { useState } from 'react'
+import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';
 import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
-import Typography from '@material-ui/core/Typography'
+import Link from '@material-ui/core/Link'
+import Typography from '@material-ui/core/Typography';
 
 const useStyles = makeStyles({
   card: {
-    maxWidth: 345
+    width: 345,
+    margin: '15px'
   },
   media: {
-    height: 200
+    height: 200,
   },
   cardText: {
-    textAlign: 'center'
+    textAlign: 'center',
   }
-})
+});
 
-const PortCard = () => {
-  cosnt classes = useStyles()
+const PortCard = props => {
+  const classes = useStyles();
+  const [onHover, setOnHover] = useState(false)
 
-  return (
-    <Card className={classes.card} style={{ margin: '15px' }}>
+  return(
+    <Card className={classes.card}>
       <CardActionArea>
         <CardMedia
           className={classes.media}
-          image="https://i.ibb.co/fn2t0LY/currency-converter.png"
-          title="Currency Converter"
+          onMouseEnter={() => setOnHover(true)}
+          onMouseLeave={() => setOnHover(false)}
+          image={onHover ? null : `${props.projects[props.i].image}`}
+          title={props.projects.title}
         />
         <CardContent>
           <Typography
@@ -37,25 +43,34 @@ const PortCard = () => {
             component="h2"
             className={classes.cardText}
           >
-            Currency Converter
-              </Typography>
-          <Typography variant="body2" color="textSecondary" component="p" className={classes.cardText}>
-            See the value of fiat and crypto currencies in the top 40 fiat assets and crypto assets.
-              </Typography>
+            {props.projects[props.i].title}
+          </Typography>
+          <Typography
+            variant="body2"
+            color="textSecondary"
+            component="p"
+            className={classes.cardText}
+          >
+            {props.projects[props.i].description}
+          </Typography>
         </CardContent>
       </CardActionArea>
       <CardActions>
-        <Button size="small" color="primary">
-          <Link href='https://charlottefrancis.github.io/CurrencyConverter/index.html'>
-            See it live
-          </Link>
-        </Button>
-        <Button size="small" color="primary">
-          <Link href='https://github.com/CharlotteFrancis/CurrencyConverter'>
-            github repo
-          </Link>
-        </Button>
+        <div style={{ margin: 'auto' }}>
+          <Button size="small" color="primary">
+            <Link href={props.projects[props.i].url}>
+              See it live
+            </Link>
+          </Button>
+          <Button size="small" color="primary">
+            <Link href={props.projects[props.i].github}>
+              github repo
+            </Link>
+          </Button>
+        </div>
       </CardActions>
     </Card>
   )
 }
+
+export default PortCard
