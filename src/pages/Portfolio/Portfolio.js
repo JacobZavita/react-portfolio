@@ -28,7 +28,7 @@ const useStyles = makeStyles({
   }
 });
 
-const projects = [
+const projects1 = [
   {
     title: 'PawPal',
     image: 'https://i.ibb.co/fFWTw5R/Screen-Shot-2021-08-23-at-4-28-17-PM.png',
@@ -49,7 +49,10 @@ const projects = [
     description: "Generate a random password between 8 and 128 characters based on user's character requirements.",
     url: 'https://jacobzavita.github.io/password_generator/',
     github: 'https://github.com/jacobzavita/password_generator'
-  },
+  }
+]
+
+const projects2 = [
   {
     title: 'ComicCol',
     image: 'https://i.ibb.co/YX6RVFm/comiccol.png',
@@ -70,8 +73,9 @@ const projects = [
     description: "A GitHub gist tutorial on how to use a regex for email validation.",
     url: 'https://gist.github.com/jacobzavita/d67af6b613402e3f6ae6d9726dae0d68',
     github: 'https://gist.github.com/jacobzavita/d67af6b613402e3f6ae6d9726dae0d68'
-  },
-] 
+  }
+]
+
 
 const Portfolio = () => {
   const classes = useStyles();
@@ -91,10 +95,19 @@ const Portfolio = () => {
             </Typography>
           </Grid>
           <Grid item xs={12} style={{ display: 'flex' }}>
-            {projects.map((project, i) => (
+            {projects1.map((project, i) => (
               <PortCard 
                 key={i}
-                projects={projects}
+                projects={projects1}
+                i={i}
+              />
+            ))}
+          </Grid>
+          <Grid item xs={12} style={{ display: 'flex' }}>
+            {projects2.map((project, i) => (
+              <PortCard
+                key={i}
+                projects={projects2}
                 i={i}
               />
             ))}
