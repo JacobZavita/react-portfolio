@@ -8,12 +8,32 @@ const useStyles = makeStyles((theme) => ({
     minHeight: '89vh',
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor: '#042A2B',
+    backgroundImage: 'linear-gradient(60deg, #042A2B 30%, #66ced6 100%)'
   },
   headerText: {
     color: '#FCF7F8',
     textAlign: 'center',
     margin: '0 0 30px 15px'
+  },
+  card: {
+    maxWidth: 500,
+    margin: '0 auto',
+    padding: '20px 5px',
+    boxShadow: '0 3px 5px 2px'
+  },
+  text: 
+  {
+    color: '#FCF7F8',
+    textAlign: 'center'
+  },
+  button: {
+    background: 'linear-gradient(45deg, #2176ae 30%, #66ced6 90%)',
+    border: 0,
+    borderRadius: 3,
+    boxShadow: '0 3px 5px 2px rgba(255, 105, 135, .3)',
+    color: 'white',
+    height: 48,
+    padding: '0 30px',
   }
 }))
 
@@ -42,7 +62,7 @@ const Contact = () => {
           </Typography>
         </Grid>
         <Grid item xs={12}>
-          <Card style={{ maxWidth:500, margin:'0 auto', padding:'20px 5px' }}>
+          <Card className={classes.card}>
             <CardContent>
               <Typography variant='h5'>Contact Me</Typography>
                 <Typography
@@ -51,7 +71,8 @@ const Contact = () => {
                   gutterBottom
                   color='textSecondary'
                 >
-                  Send me an email and we'll go from there
+                  You can reach me at jacobzavita@gmail.com or 1-503-710-5455.
+                  Or send an email with the form below (yes, it works).
                 </Typography>
                   <form onSubmit={sendEmail}>
                     <Grid container spacing={1}>
@@ -120,7 +141,7 @@ const Contact = () => {
                         <Button
                           type='submit'
                           variant='contained'
-                          color='primary'
+                          className={classes.button}
                           fullWidth
                         >
                           Submit

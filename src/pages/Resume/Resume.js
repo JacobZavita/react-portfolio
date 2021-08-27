@@ -8,7 +8,7 @@ const useStyles = makeStyles((theme) => ({
     alignItems: 'center',
     justifyContent: 'center',
     minHeight: '89vh',
-    backgroundColor: '#042A2B'
+    backgroundImage: 'linear-gradient(60deg, #042A2B 30%, #66ced6 100%)'
   },
   list: {
     display: 'flex',
@@ -19,7 +19,7 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   button: {
-    background: 'linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)',
+    background: 'linear-gradient(45deg, #2176ae 30%, #66ced6 90%)',
     border: 0,
     borderRadius: 3,
     boxShadow: '0 3px 5px 2px rgba(255, 105, 135, .3)',

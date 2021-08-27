@@ -13,7 +13,7 @@ const useStyles = makeStyles((theme) => ({
     '& > *': {
       margin: theme.spacing(1),
     },
-    backgroundColor: '#042A2B',
+    backgroundImage: 'linear-gradient(60deg, #042A2B 30%, #66ced6 100%)'
   },
   grid: {
     display: 'flex',
