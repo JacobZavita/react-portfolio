@@ -8,7 +8,7 @@ const useStyles = makeStyles((theme) => ({
     alignItems: 'center',
     justifyContent: 'center',
     minHeight: '89vh',
-    backgroundImage: 'linear-gradient(60deg, #042A2B 30%, #66ced6 100%)'
+    backgroundImage: 'linear-gradient(90deg, #042A2B 20%, #66ced6 100%)'
   },
   list: {
     display: 'flex',
@@ -37,7 +37,7 @@ const Resume = () => {
   }
 
   return (
-    <div className={classes.root}>
+    <div className={classes.root} id='resume'>
         <div className={classes.list} align='center' >
           <Paper elevation={3} style={{ margin:'15px auto', padding:'20px 5px 50px' }}>
             <Typography variant='h4'>

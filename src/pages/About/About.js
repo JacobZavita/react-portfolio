@@ -1,7 +1,10 @@
 import '@fontsource/roboto'
 import { makeStyles } from '@material-ui/core/styles'
+import Hero from '../../components/Hero'
 import { Typography, Grid, Button, useMediaQuery, useTheme } from '@material-ui/core'
-import { Link } from 'react-router-dom'
+import { Link as LinkR } from 'react-router-dom'
+import { Link } from 'react-scroll'
+import Video from '../../assets/videos/video.mp4'
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -13,7 +16,7 @@ const useStyles = makeStyles((theme) => ({
     '& > *': {
       margin: theme.spacing(1),
     },
-    backgroundImage: 'linear-gradient(60deg, #042A2B 30%, #66ced6 100%)'
+    backgroundImage: 'linear-gradient(90deg, #042A2B 20%, #66ced6 100%)'
   },
   grid: {
     display: 'flex',
@@ -50,7 +53,15 @@ const useStyles = makeStyles((theme) => ({
   textMobile: {
     color: '#FCF7F8',
     textAlign: 'center'
-  }
+  },
+  videoBg: {
+    zIndex: '0',
+    width: '100%',
+    height: '100%',
+    oObjectFit: 'cover',
+    objectFit: 'cover',
+    background: '#232a34'
+  },
 }));
 
 const About = () => {
@@ -61,7 +72,7 @@ const About = () => {
   return (
     <>
       {isMobile ? (
-        <div className={classes.root}>
+        <div className={classes.root} id='about'>
           <img src='https://i.postimg.cc/KzRs1grn/V3au-Cbxg-400x400-modified.png' alt='Jacob Zavita' className={classes.mobileImage} />
           <Typography
             variant='h3'
@@ -74,7 +85,7 @@ const About = () => {
           </Typography>
           <Grid className={classes.grid} spacing={3}>
             <Grid item xs={6}>
-              <Link to='/portfolio' className={classes.buttonText}>
+              <Link to='portfolio' smooth={true} duration={1000} className={classes.buttonText}>
                 <Button className={classes.button}>
                   projects
                 </Button>
@@ -90,7 +101,16 @@ const About = () => {
           </Grid>
         </div>
       ) : (
-        <div className={classes.root}>
+        // <Hero>
+            // <video
+            //  className={classes.videoBg}
+            //  autoplay="autoplay"
+            //  loop="loop"
+            //  muted
+            //  src={Video}
+            //  type='video/mp4'
+          //  />
+        <div className={classes.root} id='about'>
           <Grid className={classes.grid} spacing={3}>
             <Grid item xs={12} md={6} className={classes.textArea}>
               <Typography

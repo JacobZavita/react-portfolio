@@ -9,7 +9,7 @@ const useStyles = makeStyles({
     minHeight: '100vh',
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundImage: 'linear-gradient(60deg, #042A2B 30%, #66ced6 100%)'
+    backgroundImage: 'linear-gradient(90deg, #042A2B 20%, #66ced6 100%)'
   },
   card: {
     maxWidth: 345,
@@ -138,7 +138,7 @@ const Portfolio = () => {
 
   return (
     <>
-      <div className={classes.root}>
+      <div className={classes.root} id='portfolio'>
         <Grid className={classes.grid} spacing={3}>
           <Grid
             item

@@ -1,15 +1,31 @@
 import { makeStyles } from '@material-ui/core/styles';
 import { AppBar, Toolbar, Typography, IconButton } from '@material-ui/core';
 import Menu from '../Menu'
-import { Link } from 'react-router-dom'
+import { Link as LinkR } from 'react-router-dom'
+import { Link } from 'react-scroll'
+
 import { useMediaQuery, useTheme } from '@material-ui/core';
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    flexGrow: 1,
+    // flexGrow: 1,
     backgroundColor: '#2176AE',
     color: '#FCF7F8',
-    maxHeight: '8.5vh'
+    maxHeight: '8.5vh',
+    // marginTop: '-80px',
+    display: 'flex',
+    position: 'sticky',
+    top: '0',
+    zIndex: '999',
+  },
+  container: {
+    display: 'flex',
+    justifyContent: 'space-between',
+    height: '80px',
+    zIndex: '1',
+    width: '100%',
+    padding: '0 24px',
+    maxWidth: '1100px',
   },
   menuButton: {
     marginRight: theme.spacing(2),
@@ -25,6 +41,17 @@ const useStyles = makeStyles((theme) => ({
   title: {
     flexGrow: 1,
     display: 'flex',
+  },
+  title1: {
+    color: '#fff',
+    justifySelf: 'flex-start',
+    cursor: 'pointer',
+    fontSize: '1.5rem',
+    display: 'flex',
+    alignItems: 'center',
+    marginLeft: '24px',
+    fontWeight: 'bold',
+    textDecoration: 'none'
   },
   titleLink: {
     marginLeft: theme.spacing(5),
@@ -64,7 +91,8 @@ const TopBar = () => {
 
   return (
     <div>
-      <AppBar position="static" className={classes.root}>
+      <AppBar className={classes.root}>
+        {/* <div className={classes.container}> */}
         {isMobile ? (
           <>
             <IconButton edge="start" className={classes.mobileMenuButton} color="inherit" aria-label="menu">
@@ -81,26 +109,67 @@ const TopBar = () => {
         ) : (
           <div className={classes.navLinks}>
             <Typography variant="h6" className={classes.title}>
-              <Link to='/' className={classes.titleLink}>
+              <Link
+                activeClass="active"
+                to='about'
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration={1000}
+                className={classes.titleLink}
+              >
                 Jacob Zavita - Full Stack Developer
               </Link>
             </Typography>
-            <Link to='/' className={classes.link}>
+            <Link
+              activeClass="active"
+              to='about'
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={1000}
+              className={classes.link}
+            >
               About Me
             </Link>
-            <Link to='/portfolio' className={classes.link}>
+            <Link 
+              activeClass="active"
+              to='portfolio'
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={1000}
+              className={classes.link}
+            >
               Portfolio
             </Link>
-            <Link to='/contact' className={classes.link}>
-              Contact
-            </Link>
-            <Link to='/resume' className={classes.finalNavLink}>
+            <Link
+              activeClass="active"
+              to='resume'
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={1000}
+              className={classes.link}
+            >
               Resume
+            </Link>
+            <Link
+              activeClass="active"
+              to='contact'
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={1000}
+              className={classes.finalNavLink}
+            >
+              Contact
             </Link>
           </div>
         )}
         <Toolbar>
         </Toolbar>
+        {/* </div> */}
       </AppBar>
     </div>
   );

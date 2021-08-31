@@ -8,7 +8,7 @@ const useStyles = makeStyles((theme) => ({
     minHeight: '89vh',
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundImage: 'linear-gradient(60deg, #042A2B 30%, #66ced6 100%)'
+    backgroundImage: 'linear-gradient(90deg, #042A2B 20%, #66ced6 100%)'
   },
   headerText: {
     color: '#FCF7F8',
@@ -54,7 +54,7 @@ const Contact = () => {
   }
 
   return (
-    <div className={classes.root}>
+    <div className={classes.root} id='contact'>
       <Grid spacing={3}>
         <Grid item xs={12}>
           <Typography variant='h3' className={classes.headerText}>
