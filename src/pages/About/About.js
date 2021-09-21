@@ -2,15 +2,26 @@ import '@fontsource/roboto'
 import { makeStyles } from '@material-ui/core/styles'
 import Hero from '../../components/Hero'
 import { Typography, Grid, Button, useMediaQuery, useTheme } from '@material-ui/core'
-import { Link as LinkR } from 'react-router-dom'
+// import { Link as LinkR } from 'react-router-dom'
 import { Link } from 'react-scroll'
-import Video from '../../assets/videos/video.mp4'
+// import Video from '../../assets/videos/video.mp4'
 
 const useStyles = makeStyles((theme) => ({
   root: {
     display: 'flex',
     flexWrap: 'wrap',
     minHeight: '89vh',
+    alignItems: 'center',
+    justifyContent: 'center',
+    '& > *': {
+      margin: theme.spacing(1),
+    },
+    backgroundImage: 'linear-gradient(90deg, #042A2B 20%, #66ced6 100%)'
+  },
+  mobileRoot: {
+    display: 'flex',
+    flexWrap: 'wrap',
+    minHeight: '70vh',
     alignItems: 'center',
     justifyContent: 'center',
     '& > *': {
@@ -34,8 +45,9 @@ const useStyles = makeStyles((theme) => ({
     textDecoration: 'none'
   },
   textArea: {
+    maxWidth: '1100px',
     margin: '5% auto',
-    textAlign: 'left',
+    textAlign: 'center',
     padding: '120px',
   },
   imageArea: {
@@ -52,7 +64,14 @@ const useStyles = makeStyles((theme) => ({
   },
   textMobile: {
     color: '#FCF7F8',
-    textAlign: 'center'
+    textAlign: 'center',
+    marginBottom: '-10vh'
+  },
+  headerTextMobile: {
+    color: '#FCF7F8',
+    textAlign: 'center',
+    marginTop: '5vh',
+    marginBottom: '-10vh'
   },
   videoBg: {
     zIndex: '0',
@@ -72,16 +91,15 @@ const About = () => {
   return (
     <>
       {isMobile ? (
-        <div className={classes.root} id='about'>
-          <img src='https://i.postimg.cc/KzRs1grn/V3au-Cbxg-400x400-modified.png' alt='Jacob Zavita' className={classes.mobileImage} />
+        <div className={classes.mobileRoot} id='about'>
           <Typography
             variant='h3'
-            className={classes.textMobile}
+            className={classes.headerTextMobile}
           >
             Hi, I'm Jacob. I'm a...
           </Typography>
           <Typography variant='h5' className={classes.textMobile}>
-            Frontend developer with a background in B2B SaaS sales. I'm certified in Full Stack Web Development by UC Irvine.
+            Frontend developer with a background in B2B SaaS sales certified in Full Stack Web Development by UC Irvine.
           </Typography>
           <Grid className={classes.grid} spacing={3}>
             <Grid item xs={6}>
@@ -101,18 +119,13 @@ const About = () => {
           </Grid>
         </div>
       ) : (
-        // <Hero>
-            // <video
-            //  className={classes.videoBg}
-            //  autoplay="autoplay"
-            //  loop="loop"
-            //  muted
-            //  src={Video}
-            //  type='video/mp4'
-          //  />
         <div className={classes.root} id='about'>
-          <Grid className={classes.grid} spacing={3}>
-            <Grid item xs={12} md={6} className={classes.textArea}>
+          <Grid className={classes.grid} container spacing={3}>
+            <Grid
+              item
+              xs={12}
+              className={classes.textArea}
+            >
               <Typography
                 variant='h2'
                 marginBottom='20px'
@@ -121,7 +134,7 @@ const About = () => {
                 Hi, I'm Jacob. I'm a...
               </Typography>
               <Typography variant='h4' className={classes.text}>
-                Frontend developer with a background in B2B SaaS sales. I'm certified in Full Stack Web Development by UC Irvine. Check out my work.
+                Frontend developer with a background in B2B SaaS sales certified in Full Stack Web Development by UC Irvine. Check out my work.
               </Typography>
               <Link to='/portfolio' className={classes.buttonText}>
                 <Button className={classes.button}>
@@ -134,9 +147,9 @@ const About = () => {
                 </Button>
               </Link>
             </Grid>
-            <Grid item xs={12} md={6}>
+            {/* <Grid item xs={12} md={6}>
               <img src='https://i.postimg.cc/Njfzsfyv/00100lr-PORTRAIT-00100-BURST20200828161547179-COVER.jpg' alt='Jacob Zavita' className={classes.mainImage} />
-            </Grid>
+            </Grid> */}
           </Grid>
         </div>
       )}

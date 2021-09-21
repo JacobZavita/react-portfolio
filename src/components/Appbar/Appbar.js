@@ -11,7 +11,7 @@ const useStyles = makeStyles((theme) => ({
     // flexGrow: 1,
     backgroundColor: '#2176AE',
     color: '#FCF7F8',
-    maxHeight: '8.5vh',
+    maxHeight: '10.5vh',
     // marginTop: '-80px',
     display: 'flex',
     position: 'sticky',
@@ -32,10 +32,12 @@ const useStyles = makeStyles((theme) => ({
   },
   mobileMenuButton: {
     maxWidth: '10vw',
-    display: 'flex'
+    display: 'flex',
+    marginLeft: '1vw',
+    marginTop: '1vh'
   },
   navLinks: {
-    marginTop: theme.spacing(3.5),
+    marginTop: theme.spacing(2),
     display: 'flex'
   },
   title: {
@@ -62,8 +64,8 @@ const useStyles = makeStyles((theme) => ({
   mobileTitleLink: {
     textDecoration: 'none',
     color: 'inherit',
-    fontSize: '18px',
-    display: 'flex',
+    fontSize: '24px',
+    marginTop: '-48px'
   },
   link: {
     textDecoration: 'none',
@@ -92,7 +94,6 @@ const TopBar = () => {
   return (
     <div>
       <AppBar className={classes.root}>
-        {/* <div className={classes.container}> */}
         {isMobile ? (
           <>
             <IconButton edge="start" className={classes.mobileMenuButton} color="inherit" aria-label="menu">
