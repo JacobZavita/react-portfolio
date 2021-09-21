@@ -22,31 +22,33 @@ const PortCard = props => {
   return(
     <Card className={classes.card}>
       <CardActionArea>
-        <CardMedia
-          className={classes.media}
-          onMouseEnter={() => setOnHover(true)}
-          onMouseLeave={() => setOnHover(false)}
-          image={onHover ? `${props.projects[props.i].techs}` : `${props.projects[props.i].image}`}
-          title={props.projects.title}
-        />
-        <CardContent>
-          <Typography
-            gutterBottom
-            variant="h5"
-            component="h2"
-            className={classes.cardText}
-          >
-            {props.projects[props.i].title}
-          </Typography>
-          <Typography
-            variant="body2"
-            color="textSecondary"
-            component="p"
-            className={classes.cardText}
-          >
-            {props.projects[props.i].description}
-          </Typography>
-        </CardContent>
+        <Link href={props.projects[props.i].url}>
+          <CardMedia
+            className={classes.media}
+            onMouseEnter={() => setOnHover(true)}
+            onMouseLeave={() => setOnHover(false)}
+            image={onHover ? `${props.projects[props.i].techs}` : `${props.projects[props.i].image}`}
+            title={props.projects.title}
+            />
+          <CardContent>
+            <Typography
+              gutterBottom
+              variant="h5"
+              component="h2"
+              className={classes.cardText}
+              >
+              {props.projects[props.i].title}
+            </Typography>
+            <Typography
+              variant="body2"
+              color="textSecondary"
+              component="p"
+              className={classes.cardText}
+              >
+              {props.projects[props.i].description}
+            </Typography>
+          </CardContent>
+        </Link>
       </CardActionArea>
       <CardActions>
         <div style={{ margin: 'auto' }}>

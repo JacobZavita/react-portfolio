@@ -1,10 +1,7 @@
 import '@fontsource/roboto'
 import { makeStyles } from '@material-ui/core/styles'
-import Hero from '../../components/Hero'
 import { Typography, Grid, Button, useMediaQuery, useTheme } from '@material-ui/core'
-// import { Link as LinkR } from 'react-router-dom'
 import { Link } from 'react-scroll'
-// import Video from '../../assets/videos/video.mp4'
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -16,7 +13,7 @@ const useStyles = makeStyles((theme) => ({
     '& > *': {
       margin: theme.spacing(1),
     },
-    backgroundImage: 'linear-gradient(90deg, #042A2B 20%, #66ced6 100%)'
+    backgroundImage: 'linear-gradient(90deg, rgba(8,85,87,1) 0%, rgba(9,99,121,1) 11%, rgba(102,206,214,1) 100%)'
   },
   mobileRoot: {
     display: 'flex',
@@ -27,7 +24,7 @@ const useStyles = makeStyles((theme) => ({
     '& > *': {
       margin: theme.spacing(1),
     },
-    backgroundImage: 'linear-gradient(90deg, #042A2B 20%, #66ced6 100%)'
+    backgroundImage: 'linear-gradient(90deg, rgba(8,85,87,1) 0%, rgba(9,99,121,1) 11%, rgba(102,206,214,1) 100%)'
   },
   grid: {
     display: 'flex',
@@ -96,7 +93,7 @@ const About = () => {
             variant='h3'
             className={classes.headerTextMobile}
           >
-            Hi, I'm Jacob. I'm a...
+            Hi, I'm Jacob Zavita. I'm a...
           </Typography>
           <Typography variant='h5' className={classes.textMobile}>
             Frontend developer with a background in B2B SaaS sales certified in Full Stack Web Development by UC Irvine.
@@ -131,7 +128,7 @@ const About = () => {
                 marginBottom='20px'
                 className={classes.text}
               >
-                Hi, I'm Jacob. I'm a...
+                Hi, I'm Jacob Zavita. I'm a...
               </Typography>
               <Typography variant='h4' className={classes.text}>
                 Frontend developer with a background in B2B SaaS sales certified in Full Stack Web Development by UC Irvine. Check out my work.

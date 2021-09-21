@@ -9,7 +9,7 @@ const useStyles = makeStyles({
     minHeight: '100vh',
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundImage: 'linear-gradient(90deg, #042A2B 20%, #66ced6 100%)'
+    backgroundImage: 'linear-gradient(90deg, rgba(8,85,87,1) 0%, rgba(9,99,121,1) 11%, rgba(102,206,214,1) 100%)'
   },
   card: {
     maxWidth: 345,
