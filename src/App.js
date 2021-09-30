@@ -24,26 +24,6 @@ const App = () => {
       <Contact />
       <Footer />
     </>
-    // <Router>
-    //   <div>
-    //     <Appbar />
-    //     <Switch>
-    //       <Route exact path='/'>
-    //         <About />
-    //       </Route>
-    //       <Route exact path='/portfolio'>
-    //         <Portfolio />
-    //       </Route>
-    //       <Route exact path='/contact'>
-    //         <Contact />
-    //       </Route>
-    //       <Route exact path='/resume'>
-    //         <Resume />
-    //       </Route>
-    //     </Switch>
-    //     <Footer />
-    //   </div>
-    // </Router>
   )
 }
 

@@ -1,5 +1,6 @@
 import { makeStyles } from '@material-ui/core/styles'
 import DevIcon from 'devicon-react-svg'
+import solidity_icon from '../../assets/images/solidity_icon_2.png'
 import { Grid, Paper, Typography, List, ListItem, Button } from '@material-ui/core'
 
 const useStyles = makeStyles((theme) => ({
@@ -22,7 +23,7 @@ const useStyles = makeStyles((theme) => ({
     background: 'linear-gradient(45deg, #2176ae 30%, #66ced6 90%)',
     border: 0,
     borderRadius: 3,
-    boxShadow: '0 3px 5px 2px rgba(255, 105, 135, .3)',
+    boxShadow: '0 1px 1px hsl(0deg 0% 0% / 0.075), 0 2px 2px hsl(0deg 0% 0% / 0.075), 0 4px 4px hsl(0deg 0% 0% / 0.075), 0 8px 8px hsl(0deg 0% 0% / 0.075), 0 16px 16px hsl(0deg 0% 0% / 0.075)',
     color: 'white',
     height: 48,
     padding: '0 30px',
@@ -33,7 +34,7 @@ const Resume = () => {
   const classes= useStyles()
 
   const downloadFile = () => {
-    window.location.href = "https://drive.google.com/file/d/1iCotgGpkpAR7SXlyBM-vBEzUi2sIfXgl/view"
+    window.location.href = "https://docs.google.com/document/d/1vpF47yCOOdlB6ILTq0grh9Leg4Ar6tisp5SassnQqwI/edit?usp=sharing"
   }
 
   return (
@@ -50,6 +51,10 @@ const Resume = () => {
                   <ListItem>
                     <DevIcon icon='react' style={{ fill: 'purple', width:'40px', marginRight:'5px' }} viewBox='0 0 32 32'/>
                     <Typography>React</Typography>
+                  </ListItem>
+                  <ListItem>
+                    <img src={solidity_icon} alt="solidity-icon" style={{ fill: 'purple', marginRight: '18px', marginLeft: '5px' }} />
+                    <Typography>Solidity</Typography>
                   </ListItem>
                   <ListItem>
                     <DevIcon icon='mysql' style={{ fill: 'purple', width: '40px', marginRight: '5px' }} viewBox='0 0 32 32' />
@@ -70,10 +75,6 @@ const Resume = () => {
                   <ListItem>
                     <DevIcon icon='npm' style={{ fill: 'purple', width: '40px', marginRight: '5px' }} viewBox='0 0 32 32' />
                     <Typography>NPM</Typography>
-                  </ListItem>
-                  <ListItem>
-                    <DevIcon icon='jquery' style={{ fill: 'purple', width: '40px', marginRight: '5px' }} viewBox='0 0 32 32' />
-                    <Typography>JQuery</Typography>
                   </ListItem>
                 </List>
               </Grid>
@@ -104,8 +105,8 @@ const Resume = () => {
                     <Typography>MongoDB</Typography>
                   </ListItem>
                   <ListItem>
-                    <DevIcon icon='visualstudio' style={{ fill: 'purple', width: '40px', marginRight: '5px' }} viewBox='0 0 32 32' />
-                    <Typography>VSCode</Typography>
+                    <DevIcon icon='jquery' style={{ fill: 'purple', width: '40px', marginRight: '5px' }} viewBox='0 0 32 32' />
+                    <Typography>JQuery</Typography>
                   </ListItem>
                 </List>
               </Grid>

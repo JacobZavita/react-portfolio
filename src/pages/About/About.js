@@ -3,6 +3,8 @@ import { makeStyles } from '@material-ui/core/styles'
 import { Typography, Grid, Button, useMediaQuery, useTheme } from '@material-ui/core'
 import { Link } from 'react-scroll'
 
+const githubLink = 'https://github.com/JacobZavita'
+
 const useStyles = makeStyles((theme) => ({
   root: {
     display: 'flex',
@@ -33,7 +35,8 @@ const useStyles = makeStyles((theme) => ({
   },
   button: {
     backgroundColor: '#66CED6',
-    margin: ' 15px 10px'
+    margin: ' 15px 10px',
+    boxShadow: '0 1px 1px hsl(0deg 0% 0% / 0.075), 0 2px 2px hsl(0deg 0% 0% / 0.075), 0 4px 4px hsl(0deg 0% 0% / 0.075), 0 8px 8px hsl(0deg 0% 0% / 0.075), 0 16px 16px hsl(0deg 0% 0% / 0.075)',
   },
   text: {
     color: '#FCF7F8',
@@ -131,22 +134,19 @@ const About = () => {
                 Hi, I'm Jacob Zavita. I'm a...
               </Typography>
               <Typography variant='h4' className={classes.text}>
-                Frontend developer with a background in B2B SaaS sales certified in Full Stack Web Development by UC Irvine. Check out my work.
+                Fullstack and Blockchain developer with a background in B2B SaaS certified in Full Stack Web Development by UC Irvine. Check out my projects and drop me a line.
               </Typography>
               <Link to='/portfolio' className={classes.buttonText}>
                 <Button className={classes.button}>
                   check out my projects
                 </Button>
               </Link>
-              <Link to='' className={classes.buttonText}>
+              <a className={classes.buttonText} href={githubLink}>
                 <Button className={classes.button}>
-                  check out my github
+                    check out my github
                 </Button>
-              </Link>
+              </a>
             </Grid>
-            {/* <Grid item xs={12} md={6}>
-              <img src='https://i.postimg.cc/Njfzsfyv/00100lr-PORTRAIT-00100-BURST20200828161547179-COVER.jpg' alt='Jacob Zavita' className={classes.mainImage} />
-            </Grid> */}
           </Grid>
         </div>
       )}

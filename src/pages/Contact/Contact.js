@@ -19,7 +19,7 @@ const useStyles = makeStyles((theme) => ({
     maxWidth: 500,
     margin: '0 auto',
     padding: '20px 5px',
-    boxShadow: '0 3px 5px 2px'
+    boxShadow: '0 1px 1px hsl(0deg 0% 0% / 0.075), 0 2px 2px hsl(0deg 0% 0% / 0.075), 0 4px 4px hsl(0deg 0% 0% / 0.075), 0 8px 8px hsl(0deg 0% 0% / 0.075), 0 16px 16px hsl(0deg 0% 0% / 0.075)'
   },
   text: 
   {
@@ -30,7 +30,7 @@ const useStyles = makeStyles((theme) => ({
     background: 'linear-gradient(45deg, #2176ae 30%, #66ced6 90%)',
     border: 0,
     borderRadius: 3,
-    boxShadow: '0 3px 5px 2px rgba(255, 105, 135, .3)',
+    boxShadow: '0 1px 1px hsl(0deg 0% 0% / 0.075), 0 2px 2px hsl(0deg 0% 0% / 0.075), 0 4px 4px hsl(0deg 0% 0% / 0.075), 0 8px 8px hsl(0deg 0% 0% / 0.075), 0 16px 16px hsl(0deg 0% 0% / 0.075)',
     color: 'white',
     height: 48,
     padding: '0 30px',

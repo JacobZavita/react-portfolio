@@ -12,6 +12,7 @@ const useStyles = makeStyles({
   },
   cardText: {
     textAlign: 'center',
+    textDecoration: 'none',
   }
 });
 
