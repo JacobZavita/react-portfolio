@@ -9,7 +9,7 @@ const useStyles = makeStyles((theme) => ({
   root: {
     display: 'flex',
     flexWrap: 'wrap',
-    minHeight: '89vh',
+    minHeight: '100vh',
     alignItems: 'center',
     justifyContent: 'center',
     '& > *': {
@@ -34,7 +34,7 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: 'center'
   },
   button: {
-    backgroundColor: '#66CED6',
+    background: '-webkit-linear-gradient(left, #60c657, #35aee2)',
     margin: ' 15px 10px',
     boxShadow: '0 1px 1px hsl(0deg 0% 0% / 0.075), 0 2px 2px hsl(0deg 0% 0% / 0.075), 0 4px 4px hsl(0deg 0% 0% / 0.075), 0 8px 8px hsl(0deg 0% 0% / 0.075), 0 16px 16px hsl(0deg 0% 0% / 0.075)',
   },
@@ -42,7 +42,7 @@ const useStyles = makeStyles((theme) => ({
     color: '#FCF7F8',
   },
   buttonText: {
-    textDecoration: 'none'
+    textDecoration: 'none',
   },
   textArea: {
     maxWidth: '1100px',

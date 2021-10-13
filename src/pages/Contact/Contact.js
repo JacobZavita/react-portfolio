@@ -19,6 +19,7 @@ const useStyles = makeStyles((theme) => ({
     maxWidth: 500,
     margin: '0 auto',
     padding: '20px 5px',
+    marginBottom: '25px',
     boxShadow: '0 1px 1px hsl(0deg 0% 0% / 0.075), 0 2px 2px hsl(0deg 0% 0% / 0.075), 0 4px 4px hsl(0deg 0% 0% / 0.075), 0 8px 8px hsl(0deg 0% 0% / 0.075), 0 16px 16px hsl(0deg 0% 0% / 0.075)'
   },
   text: 
@@ -27,7 +28,7 @@ const useStyles = makeStyles((theme) => ({
     textAlign: 'center'
   },
   button: {
-    background: 'linear-gradient(45deg, #2176ae 30%, #66ced6 90%)',
+    background: 'linear-gradient(45deg, #60c657 30%, #35aee2 90%)',
     border: 0,
     borderRadius: 3,
     boxShadow: '0 1px 1px hsl(0deg 0% 0% / 0.075), 0 2px 2px hsl(0deg 0% 0% / 0.075), 0 4px 4px hsl(0deg 0% 0% / 0.075), 0 8px 8px hsl(0deg 0% 0% / 0.075), 0 16px 16px hsl(0deg 0% 0% / 0.075)',
