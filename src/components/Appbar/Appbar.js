@@ -1,20 +1,16 @@
 import { makeStyles } from '@material-ui/core/styles';
 import { AppBar, Typography, IconButton } from '@material-ui/core';
-import Menu from '../Menu'
 import { Link } from 'react-scroll'
-
 import { useMediaQuery, useTheme } from '@material-ui/core';
+import Menu from '../Menu'
 
 const useStyles = makeStyles((theme) => ({
-  topRoot: {
-    position: 'sticky'
-  },
   root: {
     backgroundColor: '#2176AE',
     color: '#FCF7F8',
     maxHeight: '10.5vh',
     display: 'flex',
-    position: 'sticky',
+    position: 'fixed',
     top: '0',
     zIndex: '999',
   },
@@ -92,7 +88,7 @@ const TopBar = () => {
   const isMobile = useMediaQuery(theme.breakpoints.down("md"))
 
   return (
-    <div className={classes.topRoot}>
+    <div>
       <AppBar className={classes.root}>
         {isMobile ? (
           <>
