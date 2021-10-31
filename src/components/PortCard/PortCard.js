@@ -29,6 +29,7 @@ const PortCard = props => {
             onMouseEnter={() => setOnHover(true)}
             onMouseLeave={() => setOnHover(false)}
             image={onHover ? `${props.projects[props.i].techs}` : `${props.projects[props.i].image}`}
+            // image={props.projects[props.i].image}
             title={props.projects.title}
             />
           <CardContent>

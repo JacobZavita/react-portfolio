@@ -1,6 +1,6 @@
 import '@fontsource/roboto'
 import { makeStyles } from '@material-ui/core/styles';
-import { Typography, Grid } from '@material-ui/core'
+import { Typography, Grid, useMediaQuery, useTheme } from '@material-ui/core'
 import PortCard from '../../components/PortCard'
 
 const useStyles = makeStyles({
@@ -107,41 +107,67 @@ const projects= [
 
 const Portfolio = () => {
   const classes = useStyles();
+  const theme = useTheme()
+  const isMobile = useMediaQuery(theme.breakpoints.down("md"))
 
   return (
     <>
-      <div className={classes.root} id='portfolio'>
-        <Grid className={classes.grid} spacing={3}>
-          <Grid
-            item
-            xs={12}
-            className={classes.gridRow}
-          >
-            <Typography variant='h2' className={classes.headerText}>
-              Projects
-            <hr></hr>
-            </Typography>
-          </Grid>
-          <Grid item xs={12} style={{ display: 'flex' }}>
-            {(projects.slice(0, 3)).map((project, i) => (
-              <PortCard 
-                key={i}
-                projects={projects}
-                i={i}
-              />
-            ))}
-          </Grid>
-          <Grid item xs={12} style={{ display: 'flex' }}>
-            {projects2.map((project, i) => (
-              <PortCard
-                key={i}
-                projects={projects2}
-                i={i}
-              />
-            ))}
-          </Grid>
-        </Grid>
-      </div>
+      {isMobile ? (
+        <div className={classes.root} id='portfolio'>
+            <Grid className={classes.grid} spacing={3}>
+              <Grid
+                item
+                xs={12}
+                className={classes.gridRow}
+              >
+                <Typography variant='h2' className={classes.headerText}>
+                  Projects
+                <hr></hr>
+                </Typography>
+              </Grid>
+              {projects.map((project, i) => (
+                <PortCard 
+                  key={i}
+                  projects={projects}
+                  i={i}
+                />
+              ))}
+            </Grid>
+          </div>
+        ) : (
+          <div className={classes.root} id='portfolio'>
+            <Grid className={classes.grid} spacing={3}>
+              <Grid
+                item
+                xs={12}
+                className={classes.gridRow}
+              >
+                <Typography variant='h2' className={classes.headerText}>
+                  Projects
+                <hr></hr>
+                </Typography>
+              </Grid>
+              <Grid item xs={12} style={{ display: 'flex' }}>
+                {(projects.slice(0, 3)).map((project, i) => (
+                  <PortCard 
+                    key={i}
+                    projects={projects}
+                    i={i}
+                  />
+                ))}
+              </Grid>
+              <Grid item xs={12} style={{ display: 'flex' }}>
+                {projects2.map((project, i) => (
+                  <PortCard
+                    key={i}
+                    projects={projects2}
+                    i={i}
+                  />
+                ))}
+              </Grid>
+            </Grid>
+          </div>
+        )}
    </>
   )
 }

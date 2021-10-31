@@ -1,7 +1,7 @@
 import { makeStyles } from '@material-ui/core/styles'
 import DevIcon from 'devicon-react-svg'
 import solidity_icon from '../../assets/images/solidity_icon_2.png'
-import { Grid, Paper, Typography, List, ListItem, Button } from '@material-ui/core'
+import { Grid, Paper, Typography, List, ListItem, Button, useMediaQuery, useTheme } from '@material-ui/core'
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -9,13 +9,14 @@ const useStyles = makeStyles((theme) => ({
     alignItems: 'center',
     justifyContent: 'center',
     minHeight: '89vh',
-    backgroundImage: 'linear-gradient(90deg, rgba(8,85,87,1) 0%, rgba(9,99,121,1) 11%, rgba(102,206,214,1) 100%)'
+    backgroundImage: 'linear-gradient(90deg, rgba(8,85,87,1) 0%, rgba(9,99,121,1) 11%, rgba(102,206,214,1) 100%)',
+    maxWidth: '100vw',
   },
   list: {
     display: 'flex',
     '& > *': {
       margin: theme.spacing(1),
-      width: theme.spacing(100),
+      width: theme.spacing(80),
       height: theme.spacing(60),
     },
   },
@@ -38,7 +39,8 @@ const Resume = () => {
   }
 
   return (
-    <div className={classes.root} id='resume'>
+    <>
+      <div className={classes.root} id='resume'>
         <div className={classes.list} align='center' >
           <Paper elevation={3} style={{ margin:'15px auto', padding:'20px 5px 50px' }}>
             <Typography variant='h4'>
@@ -111,14 +113,15 @@ const Resume = () => {
                 </List>
               </Grid>
             </Grid>
-            <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '10px' }}>
-              <Button className={classes.button} onClick={downloadFile}>
-                Download Resume
-              </Button>
-            </div>
-          </Paper>
+              <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '10px' }}>
+                <Button className={classes.button} onClick={downloadFile}>
+                  Download Resume
+                </Button>
+              </div>
+            </Paper>
         </div>
-    </div>
+      </div>
+    </>
   )
 }
 
